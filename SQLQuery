@@ -1,0 +1,23 @@
+declare @Flowers Table (Name1 nvarchar(20))
+
+Insert into @Flowers
+values ('Rose'),
+	   ('Tulip'),
+	   ('Daisy'),
+	   ('Forget-me-not'),
+	   ('Lilac'),
+	   ('Narcissus'),
+	   ('Camomile'),
+	   ('Lily of the valley')
+
+
+SELECT t1.Name1 as Name1, 
+       t2.Name1 as Name2, 
+       t3.Name1 as Name3, 
+       t4.Name1 as Name4,
+	   t5.Name1 as Name5
+FROM @Flowers as t1
+JOIN @Flowers as t2 ON t2.Name1 > t1.Name1
+JOIN @Flowers as t3 ON t3.Name1 > t2.Name1
+JOIN @Flowers as t4 ON t4.Name1 > t3.Name1
+JOIN @Flowers as t5 ON t5.Name1 > t4.Name1
