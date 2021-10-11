@@ -7,7 +7,7 @@ namespace TestProjectClosedList
     public class TestClosedList
     {
         /// <summary>
-        /// Проверка метода MoveNext
+        /// РџСЂРѕРІРµСЂРєР° РјРµС‚РѕРґР° MoveNext
         /// </summary>
         [Fact]
         public void MoveNextTestWithStandartStep()
@@ -26,7 +26,7 @@ namespace TestProjectClosedList
             Assert.Equal(expected, actual);
         }
         /// <summary>
-        /// Проверка метода MoveBack
+        /// РџСЂРѕРІРµСЂРєР° РјРµС‚РѕРґР° MoveBack
         /// </summary>
         [Fact]
         public void MoveBackTestWithStandartStep()
@@ -45,9 +45,9 @@ namespace TestProjectClosedList
             Assert.Equal(expected, actual);
         }
         /// <summary>
-        /// Проверка метода MoveNext с пользовательским шагом
+        /// РџСЂРѕРІРµСЂРєР° РјРµС‚РѕРґР° MoveNext СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРј С€Р°РіРѕРј
         /// </summary>
-        /// <param name="step"> Шаг </param>
+        /// <param name="step"> РЁР°Рі </param>
         [Theory]
         [InlineData(3)]
         public void MoveNextTestWithUserStep(int step)
@@ -66,9 +66,9 @@ namespace TestProjectClosedList
             Assert.Equal(expected, actual);
         }
         /// <summary>
-        /// Проверка метода MoveBack с пользовательским шагом
+        /// РџСЂРѕРІРµСЂРєР° РјРµС‚РѕРґР° MoveBack СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРј С€Р°РіРѕРј
         /// </summary>
-        /// <param name="step"> Шаг </param>
+        /// <param name="step"> РЁР°Рі </param>
         [Theory]
         [InlineData(3)]
         public void MoveBackTestWithUserStep(int step)
@@ -87,7 +87,7 @@ namespace TestProjectClosedList
             Assert.Equal(expected, actual);
         }
         /// <summary>
-        /// Проверка свойства Next
+        /// РџСЂРѕРІРµСЂРєР° СЃРІРѕР№СЃС‚РІР° Next
         /// </summary>
         [Fact]
         public void NextElementTest() 
@@ -104,7 +104,7 @@ namespace TestProjectClosedList
             Assert.Equal(expected, actual);
         }
         /// <summary>
-        /// Проверка свойства Previous
+        /// РџСЂРѕРІРµСЂРєР° СЃРІРѕР№СЃС‚РІР° Previous
         /// </summary>
         [Fact]
         public void PreviousElementTest()
@@ -121,7 +121,7 @@ namespace TestProjectClosedList
             Assert.Equal(expected, actual);
         }
         /// <summary>
-        /// Проверка свойства Head
+        /// РџСЂРѕРІРµСЂРєР° СЃРІРѕР№СЃС‚РІР° Head
         /// </summary>
         [Fact]
         public void HeadElementTest()
@@ -138,7 +138,7 @@ namespace TestProjectClosedList
             Assert.Equal(expected, actual);
         }
         /// <summary>
-        /// Проверка выбрасывания исключения типа IndexOutOfRangeException при попытке обращения к несуществующему элементу
+        /// РџСЂРѕРІРµСЂРєР° РІС‹Р±СЂР°СЃС‹РІР°РЅРёСЏ РёСЃРєР»СЋС‡РµРЅРёСЏ С‚РёРїР° IndexOutOfRangeException РїСЂРё РїРѕРїС‹С‚РєРµ РѕР±СЂР°С‰РµРЅРёСЏ Рє РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРјСѓ СЌР»РµРјРµРЅС‚Сѓ
         /// </summary>
         [Fact]
         public void GetElementByIndexOutOfRangeExceptionTest()
@@ -153,7 +153,7 @@ namespace TestProjectClosedList
             Assert.Throws<IndexOutOfRangeException>(() => currentClassClosedList[5]);
         }
         /// <summary>
-        /// Проверка вызова события при проходе через элемент с нулевым индексом при проходе MoveNext
+        /// РџСЂРѕРІРµСЂРєР° РІС‹Р·РѕРІР° СЃРѕР±С‹С‚РёСЏ РїСЂРё РїСЂРѕС…РѕРґРµ С‡РµСЂРµР· СЌР»РµРјРµРЅС‚ СЃ РЅСѓР»РµРІС‹Рј РёРЅРґРµРєСЃРѕРј РїСЂРё РїСЂРѕС…РѕРґРµ MoveNext
         /// </summary>
         [Fact]
         public void RaiseEventMoveNextTest() 
@@ -172,7 +172,7 @@ namespace TestProjectClosedList
         }
 
         /// <summary>
-        /// Проверка вызова события при проходе через элемент с нулевым индексом при проходе MoveBack
+        /// РџСЂРѕРІРµСЂРєР° РІС‹Р·РѕРІР° СЃРѕР±С‹С‚РёСЏ РїСЂРё РїСЂРѕС…РѕРґРµ С‡РµСЂРµР· СЌР»РµРјРµРЅС‚ СЃ РЅСѓР»РµРІС‹Рј РёРЅРґРµРєСЃРѕРј РїСЂРё РїСЂРѕС…РѕРґРµ MoveBack
         /// </summary>
         [Fact]
         public void RaiseEventMoveBackTest()
